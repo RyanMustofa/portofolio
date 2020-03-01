@@ -1,0 +1,12 @@
+.kotak-review{
+    background: aquamarine;
+    width: 90%;
+    margin: auto;
+}
+.content{
+    display: flex;
+    justify-content:center;
+}
+.content h5{
+    flex-direction: column;
+}
