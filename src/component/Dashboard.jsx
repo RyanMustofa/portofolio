@@ -21,12 +21,77 @@ class Dashboard extends React.Component {
             var elems = document.querySelectorAll(".parallax");
             var instances = M.Parallax.init(elems, {});
         });
+        document.addEventListener("DOMContentLoaded", function() {
+            var elems = document.querySelectorAll(".sidenav");
+            var instances = M.Sidenav.init(elems, {});
+        });
     }
     render() {
         return (
             <div>
-                <Navbar />
-                <div id="index-banner" class="parallax-container">
+                <div className="navbar-fixed">
+                    <nav class="black">
+                        <div class="nav-wrapper container">
+                            <a
+                                href="#"
+                                data-target="slide-out"
+                                class="sidenav-trigger"
+                            >
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <a href="#!" class="brand-logo center">
+                                Ryan
+                            </a>
+                            <ul class="right hide-on-med-and-down">
+                                <li>
+                                    <a href="#index-banner-home">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#skill">Skill</a>
+                                </li>
+                                <li>
+                                    <a href="#tentang">Tentang</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <ul id="slide-out" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src={Gambar1} />
+                            </div>
+                            <a>
+                                <img class="circle" src={pp} />
+                            </a>
+                            <a>
+                                <span class="white-text name">
+                                    Ryan Mustofa
+                                </span>
+                            </a>
+                            <a>
+                                <span class="white-text email">
+                                    rm281003@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#index-banner-home" class="waves-effect">Home</a>
+                    </li>
+                    <li>
+                            <a href="#skill" class="waves-effect">
+                                Skill
+                            </a>
+                    </li>
+                    <li>
+                        <a href="#tentang" class="waves-effect">
+                            Tentang
+                        </a>
+                    </li>
+                </ul>
+                <div id="index-banner-home" class="parallax-container">
                     <div class="section no-pad-bot">
                         <div class="container">
                             <br />
@@ -69,7 +134,7 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
 
-                <div class="container">
+                <div class="container" id="skill">
                     <div class="section">
                         <center>
                             <h3>Skill</h3>
@@ -205,7 +270,7 @@ class Dashboard extends React.Component {
                         />
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" id="tentang">
                     <div class="section">
                         <div class="row">
                             <div class="col s12 center">
@@ -215,13 +280,16 @@ class Dashboard extends React.Component {
                                 <h4>Contact Us</h4>
                                 <p class="left-align light">
                                     Perkenalkan Saya Ryan Mustofa . lahir di
-                                    karanganyar 28 Oktober 2003 . saya tingganl
-                                    di Lemahbang,Karanganyar,Jawa Tengah . agama
-                                    saya muslim . saya anak pertama dari bpk
-                                    Usron Riadi & Ibu Tukini . dan memiliki 2
-                                    saudara kandung
+                                    karanganyar 28 Oktober 2003 . saya tinggal
+                                    di Lemahbang,Jumapolo,Karanganyar,Jawa
+                                    Tengah . agama saya muslim . saya anak
+                                    pertama dari Bapak Usron Riyadi & Ibu Tukini
+                                    . dan memiliki 2 saudara kandung
                                 </p>
                             </div>
+                        </div>
+                        <div className="center-align">
+                            <h4>RIWAYAT PENDIDIKAN</h4>
                         </div>
                         <div class="row">
                             <div class="col s12 m4">
