@@ -13,10 +13,16 @@ import pp from "./images.jpeg";
 import sd from "./sd.jpeg";
 import smp from "./smp.jpeg";
 import smk from "./smk.jpg";
+import p1 from "./p1.png";
+import p2 from "./p2.png";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 class Dashboard extends React.Component {
     componentDidMount() {
+        document.addEventListener("DOMContentLoaded", function() {
+            var elems = document.querySelectorAll(".carousel");
+            var instances = M.Carousel.init(elems, {});
+        });
         document.addEventListener("DOMContentLoaded", function() {
             var elems = document.querySelectorAll(".parallax");
             var instances = M.Parallax.init(elems, {});
@@ -78,12 +84,14 @@ class Dashboard extends React.Component {
                         </div>
                     </li>
                     <li>
-                        <a href="#index-banner-home" class="waves-effect">Home</a>
+                        <a href="#index-banner-home" class="waves-effect">
+                            Home
+                        </a>
                     </li>
                     <li>
-                            <a href="#skill" class="waves-effect">
-                                Skill
-                            </a>
+                        <a href="#skill" class="waves-effect">
+                            Skill
+                        </a>
                     </li>
                     <li>
                         <a href="#tentang" class="waves-effect">
@@ -287,6 +295,53 @@ class Dashboard extends React.Component {
                                     . dan memiliki 2 saudara kandung
                                 </p>
                             </div>
+                        </div>
+                        <div class="carousel">
+                            <a class="carousel-item">
+                                <img src={p1} class="circle responsive-img" />
+                                <br />
+                                <h6 class="black-text center-align">
+                                    PENGELOLA SEKOLAH FRONTEND
+                                </h6>
+                                <center>
+                                    <a
+                                        href="https://github.com/RyanMustofa/frontend-pengelola-data"
+                                        class="waves-effect btn waves-light teal"
+                                    >
+                                        see repository{" "}
+                                    </a>
+                                </center>
+                            </a>
+                            <a class="carousel-item">
+                                <img src={p1} class="circle responsive-img" />
+                                <br />
+                                <h6 class="black-text center-align">
+                                    PENGELOLA SEKOLAH BACKEND
+                                </h6>
+                                <center>
+                                    <a
+                                        href="https://github.com/RyanMustofa/backend-pengelola-data"
+                                        class="waves-effect btn waves-light teal"
+                                    >
+                                        see repository{" "}
+                                    </a>
+                                </center>
+                            </a>
+                            <a class="carousel-item">
+                                <img src={p2} class="circle responsive-img" />
+                                <br />
+                                <h6 class="black-text center-align">
+                                    BERITA NEWS
+                                </h6>
+                                <center>
+                                    <a
+                                        href="https://github.com/RyanMustofa/evaluasi-router-params"
+                                        class="waves-effect btn waves-light teal"
+                                    >
+                                        see repository{" "}
+                                    </a>
+                                </center>
+                            </a>
                         </div>
                         <div className="center-align">
                             <h4>RIWAYAT PENDIDIKAN</h4>
