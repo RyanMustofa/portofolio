@@ -58,6 +58,12 @@ class Dashboard extends React.Component {
                                 <li>
                                     <a href="#tentang">Tentang</a>
                                 </li>
+                                <li>
+                                    <a href="#project">Project</a>
+                                </li>
+                                <li>
+                                    <a href="#pendidikan">Pendidikan</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -96,6 +102,16 @@ class Dashboard extends React.Component {
                     <li>
                         <a href="#tentang" class="waves-effect">
                             Tentang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#project" class="waves-effect">
+                            Project
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pendidikan" class="waves-effect">
+                            Pendidikan
                         </a>
                     </li>
                 </ul>
@@ -296,6 +312,9 @@ class Dashboard extends React.Component {
                                 </p>
                             </div>
                         </div>
+                        <div className="section" id="project">
+                            <h4 class="center-align">PROJECT</h4>
+                        </div>
                         <div class="carousel">
                             <a class="carousel-item">
                                 <img src={p1} class="circle responsive-img" />
@@ -343,7 +362,7 @@ class Dashboard extends React.Component {
                                 </center>
                             </a>
                         </div>
-                        <div className="center-align">
+                        <div className="center-align" id="pendidikan">
                             <h4>RIWAYAT PENDIDIKAN</h4>
                         </div>
                         <div class="row">
